@@ -83,7 +83,7 @@ Create a `.env` file in the **root directory** of the project.
 Add your Alpha Vantage API key:
 
 ```env
-VITE_ALPHA_VANTAGE_API_KEY=YOUR_API_KEY
+ALPHA_VANTAGE_API_KEY=YOUR_API_KEY
 ```
 
 > **Note:** If your existing `.env` uses `ALPHA_VANTAGE_API_KEY=...`, update it to `VITE_ALPHA_VANTAGE_API_KEY=...` so Vite can expose it to the frontend via `import.meta.env`.
