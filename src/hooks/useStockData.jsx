@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback, useRef } from 'react'
-import { getStockInfo} from '../data/stockData'
+import { getStockInfo} from '../Data/stockData'
 
 const API_KEY = 'process.env.ALPHA_VANTAGE_API_KEY' 
 const BASE_URL = 'https://www.alphavantage.co/query'
