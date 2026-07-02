@@ -4,7 +4,7 @@ import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react'
 import gsap from 'gsap';
 import Navbar from '../components/Navbar';
 import ChartContainer from '../components/chartContainer';
-import TimeframeSelector from '../components/TimeframeSelector';
+import TimeframeSelector from '../components/TimeFrameSelector';
 import StatsCards from '../components/StatsCard';
 import Footer from '../components/Footer';
 import EmptyState from '../components/EmptyState';
