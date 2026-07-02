@@ -1,20 +1,153 @@
-<<<<<<< HEAD
-# React + Vite
+## live link ==https://tradelens1.onrender.com/
+## ✨ Features
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+* 📊 Interactive TradingView Lightweight Charts
+* 🕯️ Candlestick chart visualization
+* 📈 Volume chart support
+* 🔍 Search stocks by symbol
+* 📅 Timeframe filtering (1W, 1M, 3M, 6M, 1Y, ALL)
+* ⚡ Smooth GSAP animations
+* 📊 Statistics dashboard
 
-Currently, two official plugins are available:
+---
+## 📂 Data Sources
+This project supports **two ways** of loading stock market data:
+### 1. Alpha Vantage API (Recommended)
+The application can fetch historical stock market data directly from the **Alpha Vantage API**, allowing users to visualize up-to-date market information.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Example API:
 
-## React Compiler
+```
+https://www.alphavantage.co/query
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+An API key is required and is stored in the `.env` file.
 
-## Expanding the Oxlint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
-=======
-# tradeLens
->>>>>>> 6b6e14ac9c23c9f7e8fb116a36473cf0acfa9233
+### 2. Local File Upload
+
+Users can also upload their own historical stock data in **CSV format**.
+
+The uploaded file should contain OHLCV data with columns similar to:
+
+```
+Date
+Open
+High
+Low
+Close
+Volume
+```
+
+This allows the application to visualize custom datasets without relying on an internet connection.
+
+---
+
+## 🛠️ Tech Stack
+
+* React (Vite)
+* JavaScript 
+* TradingView Lightweight Charts
+* GSAP
+* React Icons
+
+---
+
+## 📦 Installation
+
+Clone the repository:
+
+```bash
+git clone <your-repository-url>
+```
+
+Navigate to the project directory:
+
+```bash
+cd <repository-name>
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+---
+
+## 🔑 Environment Variables
+
+Create a `.env` file in the **root directory** of the project.
+
+Add your Alpha Vantage API key:
+
+```env
+VITE_ALPHA_VANTAGE_API_KEY=YOUR_API_KEY
+```
+
+> **Note:** If your existing `.env` uses `ALPHA_VANTAGE_API_KEY=...`, update it to `VITE_ALPHA_VANTAGE_API_KEY=...` so Vite can expose it to the frontend via `import.meta.env`.
+
+---
+
+## ▶️ Running the Project Locally
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Open your browser and visit:
+
+```
+http://localhost:5173
+```
+
+---
+
+## 📁 Project Structure
+
+```
+.
+├── public/
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── data/
+│   ├── hooks/
+│   ├── utils/
+│   ├── styles/
+│   ├── App.jsx
+│   └── main.jsx
+├── .env
+├── package.json
+└── README.md
+```
+
+---
+
+## 📊 Supported Dataset Format
+
+The application expects stock market data in OHLCV format.
+
+Example:
+
+```json
+{
+  "time": "2025-01-15",
+  "open": 201.25,
+  "high": 205.80,
+  "low": 199.60,
+  "close": 204.10,
+  "volume": 32547891
+}
+```
+
+or CSV:
+
+```
+Date,Open,High,Low,Close,Volume
+2025-01-15,201.25,205.80,199.60,204.10,32547891
+```
+
