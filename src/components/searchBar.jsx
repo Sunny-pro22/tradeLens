@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react'
-import { searchStocks } from '../data/stockData'
+import { searchStocks } from '../Data/stockData'
 import { FiSearch, FiX } from 'react-icons/fi'
 import styles from './searchBar.module.css'
 
