@@ -1,7 +1,7 @@
 import React from 'react'
 import { FaChartLine } from 'react-icons/fa'
 import ThemeToggle from './ThemeToggle'
-import SearchBar from './SearchBar'
+import SearchBar from './searchBar'
 import styles from './Navbar.module.css'
 
 function Navbar({ onSearch, selectedSymbol }) {
