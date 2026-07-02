@@ -1,0 +1,44 @@
+/* src/components/MarketOverview.module.css */
+.container {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin: 16px 0;
+}
+.card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: all var(--transition);
+}
+.card:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+}
+.name {
+  font-size: 13px;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+.price {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+.positive {
+  color: var(--success);
+  font-weight: 600;
+}
+.negative {
+  color: var(--danger);
+  font-weight: 600;
+}
+.skeleton {
+  padding: 12px 18px;
+  color: var(--text-muted);
+}
